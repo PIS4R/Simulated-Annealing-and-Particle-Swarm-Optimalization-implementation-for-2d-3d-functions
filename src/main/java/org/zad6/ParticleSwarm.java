@@ -8,9 +8,9 @@ import javax.swing.*;
 import java.util.List;
 import java.util.Random;
 public class ParticleSwarm {
-    private static final int NO_OF_NUMERATIONS = 200;//30;
-    private static final double INERTIA_WEIGHT = 0.5;
-    private static final double COGNITIVE_WEIGHT = 1.5;
+    private static final int NO_OF_NUMERATIONS = 300;//30;
+    private static final double INERTIA_WEIGHT = 0.5;//0.5;
+    private static final double COGNITIVE_WEIGHT = 1.4;//1.5;
     private static final double SOCIAL_WEIGHT = 1.7;//1.5;
     private static final double INERTIA_DAMPING = 0.99;
     private static final double LOWER_BOUND = -5.0;

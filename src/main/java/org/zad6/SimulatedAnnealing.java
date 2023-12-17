@@ -8,9 +8,9 @@ import javax.swing.*;
 import java.util.Random;
 
 public class SimulatedAnnealing {
-    private static final double INITIAL_TEMPERATURE = 100.0;
-    private static final double COOLING_RATE = 0.003;//0.003;
-    private static final int MAX_ITERATIONS = 5000;
+    private static final double INITIAL_TEMPERATURE = 10000000.0;
+    private static final double COOLING_RATE = 0.3;//0.003;
+    private static final int MAX_ITERATIONS = 10000;
 
     private static final double LOWER_BOUND = -5.0;
     private static final double UPPER_BOUND = 5.0;
