@@ -8,10 +8,10 @@ import javax.swing.*;
 import java.util.List;
 import java.util.Random;
 public class ParticleSwarm {
-    private static final int NO_OF_NUMERATIONS = 300;//30;
+    private static final int NO_OF_NUMERATIONS = 30;//30;
     private static final double INERTIA_WEIGHT = 0.5;//0.5;
-    private static final double COGNITIVE_WEIGHT = 1.4;//1.5;
-    private static final double SOCIAL_WEIGHT = 1.7;//1.5;
+    private static final double COGNITIVE_WEIGHT = 1.5;//1.5;
+    private static final double SOCIAL_WEIGHT = 1.2;//1.5;
     private static final double INERTIA_DAMPING = 0.99;
     private static final double LOWER_BOUND = -5.0;
     private static final double UPPER_BOUND = 5.0;
@@ -101,14 +101,21 @@ public class ParticleSwarm {
     }
 
     private static double costFunction(String function, double x, double y) {
-        Expression expression = new ExpressionBuilder(function)
-                .variables("x", "y")
-                .build()
-                .setVariable("x", x)
-                .setVariable("y", y);
 
+        Expression expression;
+        if(function.contains("y")){
+            expression = new ExpressionBuilder(function)
+                    .variables("x", "y")
+                    .build()
+                    .setVariable("x", x)
+                    .setVariable("y", y);
+        } else{
+            expression = new ExpressionBuilder(function)
+                    .variables("x")
+                    .build()
+                    .setVariable("x", x);
+        }
         return expression.evaluate();
-
     }
 
     private static double getRandomValue() {
@@ -116,6 +123,7 @@ public class ParticleSwarm {
     }
 
     private static double clipToBounds(double value) {
+
         return Math.max(LOWER_BOUND, Math.min(UPPER_BOUND, value));
     }
 

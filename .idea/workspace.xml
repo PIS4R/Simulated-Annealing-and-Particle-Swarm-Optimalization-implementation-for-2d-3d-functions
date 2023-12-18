@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f3478034-3671-4152-914b-ea4cca6b2e16" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/zad6/PSOAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zad6/PSOAnimation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/zad6/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zad6/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/zad6/ParticleSwarm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zad6/ParticleSwarm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/zad6/SimulatedAnnealing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/zad6/SimulatedAnnealing.java" afterDir="false" />
     </list>

@@ -101,13 +101,19 @@ public class SimulatedAnnealing {
 
     private static double costFunction(String function, double x, double y) {
 
-        Expression expression = new ExpressionBuilder(function)
-                .variables("x", "y")
-                .build()
-                .setVariable("x", x)
-                .setVariable("y", y);
-
-
+        Expression expression;
+        if(function.contains("y")){
+            expression = new ExpressionBuilder(function)
+                    .variables("x", "y")
+                    .build()
+                    .setVariable("x", x)
+                    .setVariable("y", y);
+        } else{
+            expression = new ExpressionBuilder(function)
+                    .variables("x")
+                    .build()
+                    .setVariable("x", x);
+        }
         return expression.evaluate();
     }
 
